@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.text.Font?>
+
 <AnchorPane fx:id="ap_main" fx:controller="com.example.javafxserver.Controller"
             prefHeight="396"
             prefWidth="478"
@@ -34,17 +35,16 @@
                       prefHeight="248"
                       prefWidth="412">
                 </VBox>
-
             </content>
+
         </ScrollPane>
         <Label
                 layoutX="114"
                 layoutY="26"
                 text="Nicholai's Messenger">
             <Font
-                    name ="Arial Rounded MT Bold"
+                    name= "Arial Rounded MT Bold"
                     size ="23">
-
             </Font>
         </Label>
     </children>
