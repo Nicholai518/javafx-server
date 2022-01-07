@@ -42,10 +42,12 @@
                 layoutX="114"
                 layoutY="26"
                 text="Nicholai's Messenger">
+            <font>
             <Font
-                    name= "Arial Rounded MT Bold"
+                    name= "Arial Bold"
                     size ="23">
             </Font>
+            </font>
         </Label>
     </children>
 
