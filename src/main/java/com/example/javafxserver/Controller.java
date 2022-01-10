@@ -43,12 +43,12 @@ public class Controller implements Initializable {
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
 
-		try{
+		try {
 			// try to create a new server object
 			// passing a ServerSocket as an argument that uses port 1234
 			// ServerSockets listen to incoming connections
 			server = new Server(new ServerSocket(1234));
-		} catch(IOException e){
+		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("Error creating server.");
 		}
@@ -86,7 +86,7 @@ public class Controller implements Initializable {
 				// input validation
 				// if the message is NOT empty, send it to client
 				// otherwise do not do anything
-				if(!messageToSend.isEmpty()) {
+				if (!messageToSend.isEmpty()) {
 					// create an hbox with text in it
 					HBox hBox = new HBox();
 					// add it to our GUI on the right side
@@ -106,24 +106,24 @@ public class Controller implements Initializable {
 
 
 					// This is the original, includes an error
-//					textFlow.setStyle("-fx-color: rgb(239,242,255 " +
-//							          "-fx-background-color: rgb(15,25,242)" +
-//					                  " -fx-background-radius: 20px");
+					//					textFlow.setStyle("-fx-color: rgb(239,242,255 " +
+					//							          "-fx-background-color: rgb(15,25,242)" +
+					//					                  " -fx-background-radius: 20px");
 
 					// this is the original, help from intellij
 					textFlow.setStyle("-fx-color: rgb(239,242,255); " +
 							"-fx-background-color: rgb(15,25,242);" +
 							" -fx-background-radius: 20px;");
 
-//					textFlow.setStyle("-fx-color: rgb(239,242,255)");
-//					textFlow.setStyle("-fx-background-color: rgb(15,25,242)");
-//					textFlow.setStyle("-fx-background-radius: 20px");
+					//					textFlow.setStyle("-fx-color: rgb(239,242,255)");
+					//					textFlow.setStyle("-fx-background-color: rgb(15,25,242)");
+					//					textFlow.setStyle("-fx-background-radius: 20px");
 
 					// set padding
 					textFlow.setPadding(new Insets(5, 10, 5, 10));
 
 					// Text color
-					text.setFill(Color.color(0.934, 0.945, 0.996 ));
+					text.setFill(Color.color(0.934, 0.945, 0.996));
 
 					// add to our horizontal box
 					hBox.getChildren().add(textFlow);
@@ -137,15 +137,14 @@ public class Controller implements Initializable {
 					// finally, we want to clear our text field
 					// allowing a new message to be entered
 					tf_message.clear();
-
 				}
-
 			}
 		});
 	}
+
 	// when we receive a message
 	// This message will append an hbox to our GUI
-	public static void addLabel(String messageFromTheClient, VBox vbox){
+	public static void addLabel(String messageFromTheClient, VBox vbox) {
 		HBox hBox = new HBox();
 		// position is center left, this is visually similar to
 		// how incoming text messages look on our phones
@@ -157,12 +156,12 @@ public class Controller implements Initializable {
 		TextFlow textFlow = new TextFlow();
 
 		textFlow.setStyle("-fx-background-color: rgb(233,233,235);" +
-		                  "-fx-background-radius: 20px;");
+				"-fx-background-radius: 20px;");
 
 		//		textFlow.setStyle("-fx-background-color: rgb(233,233,235)");
 		//		textFlow.setStyle("-fx-background-radius: 20px");
 
-		textFlow.setPadding(new Insets(5,10,5,10));
+		textFlow.setPadding(new Insets(5, 10, 5, 10));
 		hBox.getChildren().add(textFlow);
 
 		// In JavaFX we cannot update the GUI from a thread other than the application thread
