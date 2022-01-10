@@ -113,7 +113,7 @@ public class Controller implements Initializable {
 					// this is the original, help from intellij
 					textFlow.setStyle("-fx-color: rgb(239,242,255); " +
 							"-fx-background-color: rgb(15,25,242);" +
-							" -fx-background-radius: 20px");
+							" -fx-background-radius: 20px;");
 
 //					textFlow.setStyle("-fx-color: rgb(239,242,255)");
 //					textFlow.setStyle("-fx-background-color: rgb(15,25,242)");
@@ -157,7 +157,7 @@ public class Controller implements Initializable {
 		TextFlow textFlow = new TextFlow();
 
 		textFlow.setStyle("-fx-background-color: rgb(233,233,235);" +
-		                  "-fx-background-radius: 20px");
+		                  "-fx-background-radius: 20px;");
 
 		//		textFlow.setStyle("-fx-background-color: rgb(233,233,235)");
 		//		textFlow.setStyle("-fx-background-radius: 20px");
